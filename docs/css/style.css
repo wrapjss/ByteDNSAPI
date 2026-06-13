@@ -36,3 +36,19 @@ code {
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
 }
+
+.page {
+  display: grid;
+  grid-template-columns: 0.3fr 1.3fr 0.3fr;
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .page {
+    display: flex;
+  }
+
+  .margin {
+    display: none;
+  }
+}

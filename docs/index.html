@@ -9,88 +9,185 @@
 </head>
 
 <body>
-  <h1>ByteDNS API</h1>
-  <h3>Documentation</h3>
-  <hr></hr>
-  <div class="endpointentry">
-    <div class="splitter">
-      <div>
-        <span class="getbadge">GET</span>
-        <span class="endpoint"> /query/a</span>
-        <p class="endpointdescription">Query a host / domain name for an A record</p>
-        <code>GET /query/a?host=example.com</code>
-        <p style="margin-bottom: 2px; margin-top: 18px;" class="endpointdescription">Parameters:</p>
-        - <code>host</code> - Host / domain  name to query
+  <div class="page">
+    <div class="margin">
+      <a></a>
+    </div>
+
+    <div>
+      <h1>ByteDNS API</h1>
+      <h3>Documentation</h3>
+
+      <hr>
+      </hr>
+
+      <div class="endpointentry">
+        <div class="splitter">
+          <div>
+            <span class="getbadge">GET</span>
+            <span class="endpoint"> /query/a</span>
+            <p class="endpointdescription">Query a host / domain name for an A record</p>
+            <code>GET /query/a?host=example.com</code>
+            <p style="margin-bottom: 2px; margin-top: 18px;" class="endpointdescription">Parameters:</p>
+            - <code>host</code> - Host / domain name to query
+          </div>
+
+          <div>
+            <h2 style="margin: 0; margin-bottom: 6px;">Try the A record query API!</h2>
+            <input placeholder="Host / Domain name" id="a-dns-lookup" />
+            <button id="a-lookup-submit">Lookup</button>
+            <p id="a-lookup-result"></p>
+          </div>
+        </div>
       </div>
 
-      <div>
-        hhhhhh
+      <div class="endpointentry">
+        <div class="splitter">
+          <div>
+            <span class="getbadge">GET</span>
+            <span class="endpoint"> /query/aaaa</span>
+            <p class="endpointdescription">Query a host / domain name for an AAAA record</p>
+            <code>GET /query/aaaa?host=example.com</code>
+            <p style="margin-bottom: 2px; margin-top: 18px;" class="endpointdescription">Parameters:</p>
+            - <code>host</code> - Host / domain name to query
+          </div>
+
+          <div>
+            <h2 style="margin: 0; margin-bottom: 6px;">Try the AAAA record query API!</h2>
+            <input placeholder="Host / Domain name" id="aaaa-dns-lookup" />
+            <button id="aaaa-lookup-submit">Lookup</button>
+            <p id="aaaa-lookup-result"></p>
+          </div>
+        </div>
       </div>
+
+      <div class="endpointentry">
+        <div class="splitter">
+          <div>
+            <span class="getbadge">GET</span>
+            <span class="endpoint"> /query/cname</span>
+            <p class="endpointdescription">Query a host / domain name for an CNAME record</p>
+            <code>GET /query/cname?host=example.com</code>
+            <p style="margin-bottom: 2px; margin-top: 18px;" class="endpointdescription">Parameters:</p>
+            - <code>host</code> - Host / domain name to query
+          </div>
+
+          <div>
+            <h2 style="margin: 0; margin-bottom: 6px;">Try the CNAME record query API!</h2>
+            <input placeholder="Host / Domain name" id="cname-dns-lookup" />
+            <button id="cname-lookup-submit">Lookup</button>
+            <p id="cname-lookup-result"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="endpointentry">
+        <div class="splitter">
+          <div>
+            <span class="getbadge">GET</span>
+            <span class="endpoint"> /query/txt</span>
+            <p class="endpointdescription">Query a host / domain name for an TXT record</p>
+            <code>GET /query/txt?host=example.com</code>
+            <p style="margin-bottom: 2px; margin-top: 18px;" class="endpointdescription">Parameters:</p>
+            - <code>host</code> - Host / domain name to query
+          </div>
+
+          <div>
+            <h2 style="margin: 0; margin-bottom: 6px;">Try the TXT record query API!</h2>
+            <input placeholder="Host / Domain name" id="txt-dns-lookup" />
+            <button id="txt-lookup-submit">Lookup</button>
+            <p id="txt-lookup-result"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="endpointentry">
+        <div class="splitter">
+          <div>
+            <span class="getbadge">GET</span>
+            <span class="endpoint"> /query/ns</span>
+            <p class="endpointdescription">Query a host / domain name for an NS record</p>
+            <code>GET /query/ns?host=example.com</code>
+            <p style="margin-bottom: 2px; margin-top: 18px;" class="endpointdescription">Parameters:</p>
+            - <code>host</code> - Host / domain name to query
+          </div>
+
+          <div>
+            <h2 style="margin: 0; margin-bottom: 6px;">Try the NS record query API!</h2>
+            <input placeholder="Host / Domain name" id="ns-dns-lookup" />
+            <button id="ns-lookup-submit">Lookup</button>
+            <p id="ns-lookup-result"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="endpointentry">
+        <div class="splitter">
+          <div>
+            <span class="getbadge">GET</span>
+            <span class="endpoint"> /query/mx</span>
+            <p class="endpointdescription">Query a host / domain name for an MX record</p>
+            <code>GET /query/mx?host=example.com</code>
+            <p style="margin-bottom: 2px; margin-top: 18px;" class="endpointdescription">Parameters:</p>
+            - <code>host</code> - Host / domain name to query
+          </div>
+
+          <div>
+            <h2 style="margin: 0; margin-bottom: 6px;">Try the MX record query API!</h2>
+            <input placeholder="Host / Domain name" id="mx-dns-lookup" />
+            <button id="mx-lookup-submit">Lookup</button>
+            <p id="mx-lookup-result"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="endpointentry">
+        <div class="splitter">
+          <div>
+            <span class="getbadge">GET</span>
+            <span class="endpoint"> /query/srv</span>
+            <p class="endpointdescription">Query a host / domain name for an SRV record</p>
+            <code>GET /query/srv?host=example.com</code>
+            <p style="margin-bottom: 2px; margin-top: 18px;" class="endpointdescription">Parameters:</p>
+            - <code>host</code> - Host / domain name to query
+          </div>
+
+          <div>
+            <h2 style="margin: 0; margin-bottom: 6px;">Try the SRV record query API!</h2>
+            <input placeholder="Host / Domain name" id="srv-dns-lookup" />
+            <button id="srv-lookup-submit">Lookup</button>
+            <p id="srv-lookup-result"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="endpointentry">
+        <div class="splitter">
+          <div>
+            <span class="getbadge">GET</span>
+            <span class="endpoint"> /query/soa</span>
+            <p class="endpointdescription">Query a host / domain name for an SOA record</p>
+            <code>GET /query/soa?host=example.com</code>
+            <p style="margin-bottom: 2px; margin-top: 18px;" class="endpointdescription">Parameters:</p>
+            - <code>host</code> - Host / domain name to query
+          </div>
+
+          <div>
+            <h2 style="margin: 0; margin-bottom: 6px;">Try the SOA record query API!</h2>
+            <input placeholder="Host / Domain name" id="soa-dns-lookup" />
+            <button id="soa-lookup-submit">Lookup</button>
+            <p id="soa-lookup-result"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="margin">
+      <a></a>
     </div>
   </div>
 
-  <div class="endpointentry">
-    <span class="getbadge">GET</span>
-    <span class="endpoint"> /query/aaaa</span>
-    <p class="endpointdescription">Query a host / domain name for an AAAA record</p>
-    <code>GET /query/aaaa?host=example.com</code>
-    <p style="margin-bottom: 2px; margin-top: 18px;" class="endpointdescription">Parameters:</p>
-    - <code>host</code> - Host / domain  name to query
-  </div>
-
-  <div class="endpointentry">
-    <span class="getbadge">GET</span>
-    <span class="endpoint"> /query/cname</span>
-    <p class="endpointdescription">Query a host / domain name for an CNAME record</p>
-    <code>GET /query/cname?host=example.com</code>
-    <p style="margin-bottom: 2px; margin-top: 18px;" class="endpointdescription">Parameters:</p>
-    - <code>host</code> - Host / domain  name to query
-  </div>
-
-  <div class="endpointentry">
-    <span class="getbadge">GET</span>
-    <span class="endpoint"> /query/txt</span>
-    <p class="endpointdescription">Query a host / domain name for an TXT record</p>
-    <code>GET /query/txt?host=example.com</code>
-    <p style="margin-bottom: 2px; margin-top: 18px;" class="endpointdescription">Parameters:</p>
-    - <code>host</code> - Host / domain  name to query
-  </div>
-
-  <div class="endpointentry">
-    <span class="getbadge">GET</span>
-    <span class="endpoint"> /query/ns</span>
-    <p class="endpointdescription">Query a host / domain name for an NS record</p>
-    <code>GET /query/ns?host=example.com</code>
-    <p style="margin-bottom: 2px; margin-top: 18px;" class="endpointdescription">Parameters:</p>
-    - <code>host</code> - Host / domain  name to query
-  </div>
-
-  <div class="endpointentry">
-    <span class="getbadge">GET</span>
-    <span class="endpoint"> /query/mx</span>
-    <p class="endpointdescription">Query a host / domain name for an MX record</p>
-    <code>GET /query/mx?host=example.com</code>
-    <p style="margin-bottom: 2px; margin-top: 18px;" class="endpointdescription">Parameters:</p>
-    - <code>host</code> - Host / domain  name to query
-  </div>
-
-  <div class="endpointentry">
-    <span class="getbadge">GET</span>
-    <span class="endpoint"> /query/srv</span>
-    <p class="endpointdescription">Query a host / domain name for an SRV record</p>
-    <code>GET /query/srv?host=example.com</code>
-    <p style="margin-bottom: 2px; margin-top: 18px;" class="endpointdescription">Parameters:</p>
-    - <code>host</code> - Host / domain  name to query
-  </div>
-
-  <div class="endpointentry">
-    <span class="getbadge">GET</span>
-    <span class="endpoint"> /query/soa</span>
-    <p class="endpointdescription">Query a host / domain name for an SOA record</p>
-    <code>GET /query/soa?host=example.com</code>
-    <p style="margin-bottom: 2px; margin-top: 18px;" class="endpointdescription">Parameters:</p>
-    - <code>host</code> - Host / domain  name to query
-  </div>
+  <script src="script.js"></script>
 </body>
 
 </html>

@@ -11,6 +11,10 @@ app.get("/style.css", (req, res) => {
   res.sendFile(__dirname + "/docs/css/style.css");
 });
 
+app.get("/script.js", (req, res) => {
+  res.sendFile(__dirname + "/docs/js/script.js");
+});
+
 app.listen(6701, () => {
   console.log("ByteDNS API listening now on port 6701");
 });
