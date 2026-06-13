@@ -1,0 +1,38 @@
+.getbadge {
+  font-size: 23px;
+  border: 2.5px solid black;
+  border-radius: 5px;
+  padding: 2px 4px 2px 4px;
+  margin-right: 2px;
+  font-weight: bold;
+}
+
+.endpoint {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.endpointdescription {
+  margin-top: 6px;
+  /* margin-bottom: 6px; */
+  font-size: 20px;
+}
+
+code {
+  background: #dedede;
+  padding: 3px 4px 3px 4px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.endpointentry {
+  margin-top: 17px;
+  padding-top: 15px;
+  border-top: 3px solid black;
+}
+
+.splitter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
