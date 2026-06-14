@@ -135,8 +135,8 @@ function formatBulkData(d) {
   return table;
 }
 
-bulkButton.onclick = async () => {
-  try {
+async function run2() {
+try {
     const res= await fetch("https://him.hackclub.app/query/bulk", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -153,3 +153,9 @@ bulkButton.onclick = async () => {
     return bulkResult.innerText = `Error! ERR: ${e}`;
   }
 }
+
+bulkButton.onclick = async () => {
+  await run2();
+}
+
+bulkInput.addEventListener('keydown', e => { if (e.key === 'Enter') run2(); });
