@@ -43,6 +43,14 @@ code {
   gap: 1.5rem;
 }
 
+p {
+  margin-bottom: 4px;
+}
+
+table, th, td {
+  border: 1px solid;
+}
+
 @media screen and (max-width: 767px) {
   .page {
     display: flex;

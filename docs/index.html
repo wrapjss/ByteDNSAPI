@@ -1,3 +1,5 @@
+<!-- index.html is the web page / documentation page -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,6 +32,7 @@
             <code>GET /query/a?host=example.com</code>
             <p style="margin-bottom: 2px; margin-top: 18px;" class="endpointdescription">Parameters:</p>
             - <code>host</code> - Host / domain name to query
+            <p>Returns HTTP 404 if there are no A records.</p>
           </div>
 
           <div>
@@ -50,6 +53,7 @@
             <code>GET /query/aaaa?host=example.com</code>
             <p style="margin-bottom: 2px; margin-top: 18px;" class="endpointdescription">Parameters:</p>
             - <code>host</code> - Host / domain name to query
+            <p>Returns HTTP 404 if there are no AAAA records.</p>
           </div>
 
           <div>
@@ -70,6 +74,7 @@
             <code>GET /query/cname?host=example.com</code>
             <p style="margin-bottom: 2px; margin-top: 18px;" class="endpointdescription">Parameters:</p>
             - <code>host</code> - Host / domain name to query
+            <p>Returns HTTP 404 if there are no CNAME records.</p>
           </div>
 
           <div>
@@ -90,6 +95,7 @@
             <code>GET /query/txt?host=example.com</code>
             <p style="margin-bottom: 2px; margin-top: 18px;" class="endpointdescription">Parameters:</p>
             - <code>host</code> - Host / domain name to query
+            <p>Returns HTTP 404 if there are no TXT records.</p>
           </div>
 
           <div>
@@ -110,6 +116,7 @@
             <code>GET /query/ns?host=example.com</code>
             <p style="margin-bottom: 2px; margin-top: 18px;" class="endpointdescription">Parameters:</p>
             - <code>host</code> - Host / domain name to query
+            <p>Returns HTTP 404 if there are no NS records.</p>
           </div>
 
           <div>
@@ -130,6 +137,7 @@
             <code>GET /query/mx?host=example.com</code>
             <p style="margin-bottom: 2px; margin-top: 18px;" class="endpointdescription">Parameters:</p>
             - <code>host</code> - Host / domain name to query
+            <p>Returns HTTP 404 if there are no MX records.</p>
           </div>
 
           <div>
@@ -150,6 +158,7 @@
             <code>GET /query/srv?host=example.com</code>
             <p style="margin-bottom: 2px; margin-top: 18px;" class="endpointdescription">Parameters:</p>
             - <code>host</code> - Host / domain name to query
+            <p>Returns HTTP 404 if there are no SRV records.</p>
           </div>
 
           <div>
@@ -170,6 +179,7 @@
             <code>GET /query/soa?host=example.com</code>
             <p style="margin-bottom: 2px; margin-top: 18px;" class="endpointdescription">Parameters:</p>
             - <code>host</code> - Host / domain name to query
+            <p>Returns HTTP 404 if there are no SOA records.</p>
           </div>
 
           <div>
@@ -177,6 +187,36 @@
             <input placeholder="Host / Domain name" id="soa-dns-lookup" />
             <button id="soa-lookup-submit">Lookup</button>
             <p id="soa-lookup-result"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="endpointentry">
+        <div class="splitter">
+          <div>
+            <span class="getbadge">POST</span>
+            <span class="endpoint"> /query/buld</span>
+            <p class="endpointdescription">Query for several record types (of one host)</p>
+            <code>
+              POST /query/bulk
+              <br><br>
+              {"host": "example.com", "recordTypes": ["all"]}
+            </code>
+            <p style="margin-bottom: 2px; margin-top: 18px;" class="endpointdescription">JSON Body Parameters:</p>
+            - <code>host</code> - Host / domain name to query
+            - <code>recordTypes</code> - The types of records to query the host for. (Array)
+            <p>The record types are the same as they are for the GET endpoints.</p>
+            <p>There is an additional record type: <code>all</code>. It simply returns all records.</p>
+            <p>Returns a bunch of empty arrays if there are no records.</p>
+          </div>
+
+          <div>
+            <h2 style="margin: 0; margin-bottom: 6px;">Try the bulk record qeury API!</h2>
+            Will just fetch all record types by default
+            <br>
+            <input placeholder="Host / Domain name" id="bulk-dns-lookup" />
+            <button id="bulk-lookup-submit">Lookup</button>
+            <p id="bulk-lookup-result"></p>
           </div>
         </div>
       </div>
