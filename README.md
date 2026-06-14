@@ -1,6 +1,6 @@
 # ByteDNS API
 A simple and lightweight DNS lookup API built with Node.js and Express. Supports querying A, AAAA, CNAME, TXT, NS, MX, SRV, and SOA records.
-Designed to run with a small profile and keep things lightweight (even tho its node) either way that's why I named it BYTE dns api..................
+Designed to run with a small profile and keep things lightweight (even tho its node and node = heavy) either way that's why I named it BYTE dns api..................
  
  > A documentation page has been hand-crafted for you at ``/docs``!
 
